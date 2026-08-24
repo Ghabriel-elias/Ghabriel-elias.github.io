@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Broto · Una foto y sabes qué le pasa a tu planta</title>
+<title>Broto</title>
 <meta name="description" content="Broto identifica la especie por la foto, ordena las causas probables del problema y te da una prueba para confirmarlo en casa. Después te recuerda regar.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Broto · Una foto y sabes qué le pasa a tu planta">
@@ -38,11 +38,14 @@
       <a href="#precios">Precios</a>
       <a href="/es/ayuda">Ayuda</a>
     </nav>
-    <div class="langs">
-      <a href="/" hreflang="pt-BR">pt</a>
-      <a href="/en" hreflang="en">en</a>
-      <a href="/es" aria-current="true">es</a>
-    </div>
+    <details class="langs">
+      <summary aria-label="Idioma"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.2 9.4h17.6M3.2 14.6h17.6"/><path d="M12 3a15.6 15.6 0 0 0 0 18 15.6 15.6 0 0 0 0-18Z"/></svg><span>Español</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+      <div class="langs-menu">
+        <a href="/" hreflang="pt-BR">Português</a>
+        <a href="/en" hreflang="en">English</a>
+        <a href="/es" aria-current="true">Español</a>
+      </div>
+    </details>
   </div>
 </header>
 
@@ -51,17 +54,19 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="eyebrow">Identifica · diagnostica · recuerda</p>
+        <p class="eyebrow">Identificación · diagnóstico · recordatorios</p>
         <h1>Una foto, y sabes qué le pasa a tu planta</h1>
         <p class="lede">Fotografía la planta. Broto devuelve la especie, sus cuidados y, cuando algo va mal, las causas probables en orden — con una prueba que haces en casa para saber cuál es.</p>
         <p class="soon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="6.4"/><path d="M8 4.4V8l2.6 1.6" stroke-linecap="round"/></svg>Muy pronto en la App Store y en Google Play</p>
-        <p class="hero-note">3 análisis el primer mes, sin tarjeta.</p>
+        <p class="hero-note">3 análisis el primer mes, sin ningún cobro.</p>
       </div>
 
       <div class="phone" aria-hidden="true">
         <div class="phone-screen">
-          <div class="shot-photo">
-            <svg viewBox="135 103 292 367" aria-hidden="true">
+          <div class="app">
+
+            <div class="app-photo">
+              <svg viewBox="135 103 292 367" aria-hidden="true">
             <g transform="translate(256 306) scale(6.3529) translate(-38 -39)" fill="#8FA383">
               <path d="M38 39C38 22 30 15 20 9C34 12 41 23 42 34C44 20 53 12 64 8C52 17 45 26 44 39H38Z"/>
             </g>
@@ -70,23 +75,98 @@
               <path d="M-94 2 L94 2 L72 96 Q72 112 54 112 L-54 112 Q-72 112 -72 96 Z" fill="#C88B6A"/>
             </g>
           </svg>
-          </div>
-          <div class="shot">
-            <p class="eyebrow">Especie</p>
-            <p class="shot-name">Potos</p>
-            <p class="shot-sci">Epipremnum aureum</p>
-
-            <div class="shot-card">
-              <p class="eyebrow">Qué puede ser</p>
-              <p class="shot-row"><i class="dot"></i><b>Exceso de riego</b><span class="rank">alta</span></p>
-              <p class="shot-row"><i class="dot is-mid"></i><b>Poca luz</b><span class="rank">media</span></p>
-              <p class="shot-row"><i class="dot is-low"></i><b>Hongo en la raíz</b><span class="rank">baja</span></p>
             </div>
 
-            <div class="shot-confirm">
-              <p class="eyebrow">Cómo confirmarlo</p>
-              <p>Mete el dedo tres centímetros en la tierra. Si sale húmedo, es exceso de riego — no es hongo.</p>
+            <div class="app-sheet">
+              <div class="app-pad">
+                <p class="app-eyebrow">Especie</p>
+                <p class="app-species">Potos</p>
+                <p class="app-sci">Epipremnum aureum</p>
+                <div class="app-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.4v5.4" stroke-linecap="round"/><circle cx="12" cy="16.4" r="1.15" fill="currentColor" stroke="none"/></svg><span>3 cosas para mirar</span></div>
+              </div>
+
+              <div class="app-section">
+                <div class="app-pad">
+                  <p class="app-eyebrow">Diagnóstico</p>
+                  <p class="app-title">Qué puede estar pasando</p>
+                  <p class="app-hint">Desliza para ver las otras</p>
+                </div>
+
+                <div class="app-carousel">
+                  <div class="app-card">
+                    <p class="app-cause">Exceso de riego</p>
+                    <div class="app-block">
+                      <p class="app-label">Lo que identificamos</p>
+                      <p class="app-body">Las hojas de abajo amarillean primero y la tierra sigue húmeda desde el último riego.</p>
+                    </div>
+                    <div class="app-block">
+                      <p class="app-label">Qué hacer</p>
+                      <p class="app-body">Espera a que la tierra se seque tres dedos antes de volver a regar y comprueba que la maceta tenga agujero.</p>
+                    </div>
+                  </div>
+                  <div class="app-card">
+                    <p class="app-cause">Poca luz</p>
+                    <div class="app-block">
+                      <p class="app-label">Lo que identificamos</p>
+                      <p class="app-body">Tallo estirado y hojas nuevas más pequeñas que las viejas.</p>
+                    </div>
+                    <div class="app-block">
+                      <p class="app-label">Qué hacer</p>
+                      <p class="app-body">Acércala a una ventana, sin que el sol dé directo en la hoja.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="app-dots"><i class="is-on"></i><i></i><i></i></div>
+              </div>
+
+              <div class="app-section app-pad">
+                <p class="app-eyebrow">Prueba en casa</p>
+                <p class="app-title">Cómo confirmar el problema</p>
+                <div class="app-confirm"><p>Mete el dedo tres centímetros en la tierra. Si sale húmedo, es exceso de riego — no es hongo.</p></div>
+              </div>
+
+              <div class="app-section app-pad">
+                <p class="app-eyebrow">Cuidados</p>
+                <div class="app-care">
+                  <div class="app-care-row">
+                    <span class="app-care-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3.4c3.4 4 5.9 7.2 5.9 10A5.9 5.9 0 0 1 12 19.3 5.9 5.9 0 0 1 6.1 13.4c0-2.8 2.5-6 5.9-10Z" stroke-linejoin="round"/></svg></span>
+                    <div class="app-care-texts">
+                      <p class="app-label">Agua</p>
+                      <p class="app-care-value">Cada 7 días</p>
+                      
+                    </div>
+                  </div>
+                  <div class="app-care-row">
+                    <span class="app-care-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4.1"/><path d="M12 2.8v2.1M12 19.1v2.1M4.4 4.4l1.5 1.5M18.1 18.1l1.5 1.5M2.8 12h2.1M19.1 12h2.1M4.4 19.6l1.5-1.5M18.1 5.9l1.5-1.5" stroke-linecap="round"/></svg></span>
+                    <div class="app-care-texts">
+                      <p class="app-label">Luz</p>
+                      <p class="app-care-value">Luz indirecta</p>
+                      <p class="app-care-note">Cerca de una ventana, sin sol directo.</p>
+                    </div>
+                  </div>
+                  <div class="app-care-row">
+                    <span class="app-care-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 20.6v-7.4" stroke-linecap="round"/><path d="M12 13.2c0-3.3 2.4-5.7 5.7-6-.3 3.3-2.4 5.7-5.7 6Z" stroke-linejoin="round"/><path d="M12 15.4c-3 0-5.2-2-5.5-5 3 .3 5.2 2.1 5.5 5Z" stroke-linejoin="round"/></svg></span>
+                    <div class="app-care-texts">
+                      <p class="app-label">Abono</p>
+                      <p class="app-care-value">Mensual</p>
+                      <p class="app-care-note">Solo en primavera y verano.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="app-pad">
+                <div class="app-toxic">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><ellipse cx="7.3" cy="9.5" rx="1.9" ry="2.5"/><ellipse cx="12" cy="7.7" rx="1.9" ry="2.6"/><ellipse cx="16.7" cy="9.5" rx="1.9" ry="2.5"/><path d="M12 12.3c2.7 0 4.9 2.1 4.9 4.2 0 1.6-1.1 2.6-2.7 2.6-1 0-1.5-.4-2.2-.4s-1.2.4-2.2.4c-1.6 0-2.7-1-2.7-2.6 0-2.1 2.2-4.2 4.9-4.2Z"/></svg>
+                  <div>
+                    <p class="app-toxic-title">Tóxica para mascotas</p>
+                    <p class="app-toxic-text">Mantenla lejos de perros y gatos. Esto no sustituye la orientación de un veterinario.</p>
+                  </div>
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -104,17 +184,146 @@
         <div class="step">
           <span class="n">01</span>
           <h3>Fotografía</h3>
-          <p>Encuadra la planta entera. Si hay una hoja rara, hazle una segunda foto — o sáltala. La app no pregunta nada más.</p>
+          <p>Encuadra la planta entera. Si hay una hoja rara, hazle una segunda foto — o sáltala. Broto no pregunta nada más.</p>
+          <div class="step-shot" aria-hidden="true">
+            <div class="step-screen is-dark">
+              <div class="app-camera">
+              <div class="cam-view">
+                <div class="cam-guide"><svg viewBox="135 103 292 367" aria-hidden="true">
+            <g transform="translate(256 306) scale(6.3529) translate(-38 -39)" fill="#8FA383">
+              <path d="M38 39C38 22 30 15 20 9C34 12 41 23 42 34C44 20 53 12 64 8C52 17 45 26 44 39H38Z"/>
+            </g>
+            <g transform="translate(256 352)">
+              <rect x="-108" y="-46" width="216" height="40" rx="14" fill="#B4522F"/>
+              <path d="M-94 2 L94 2 L72 96 Q72 112 54 112 L-54 112 Q-72 112 -72 96 Z" fill="#C88B6A"/>
+            </g>
+          </svg></div>
+                <div class="cam-top">
+                  <span class="cam-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+                  <span class="cam-actions">
+                    <span class="cam-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M9.6 9.4a2.5 2.5 0 1 1 3.3 2.4c-.6.2-.9.7-.9 1.3v.5" stroke-linecap="round"/><circle cx="12" cy="17" r="1.05" fill="currentColor" stroke="none"/></svg></span>
+                    <span class="cam-circle"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.4 2 5.6 13.2h5L9.8 22l8.4-11.8h-5.4L13.4 2Z"/></svg></span>
+                  </span>
+                </div>
+                <div class="cam-hint">
+                  <p class="cam-hint-title">Encuadra la planta entera</p>
+                  <p class="cam-hint-text">Maceta y hojas en la foto.<br>Es lo que muestra la especie.</p>
+                </div>
+              </div>
+              <div class="cam-bar">
+                <div class="cam-action">
+                  <span class="cam-side"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3.2" y="4.6" width="17.6" height="14.8" rx="2.6"/><circle cx="8.6" cy="9.8" r="1.6"/><path d="m4.4 17.2 4.8-4.6 3.4 3.2 2.8-2.4 4.2 3.8" stroke-linejoin="round"/></svg></span>
+                  <span class="cam-label">Galería</span>
+                </div>
+                <div class="cam-action">
+                  <span class="cam-shutter"><span class="cam-core"></span></span>
+                  <span class="cam-label">Hacer foto</span>
+                </div>
+                <div class="cam-action"><span class="cam-ph"></span></div>
+              </div>
+            </div>
+            </div>
+          </div>
         </div>
         <div class="step">
           <span class="n">02</span>
           <h3>Descubre</h3>
           <p>Especie, cuidados y, si algo va mal, las causas probables en orden. Una foto, una respuesta.</p>
+          <div class="step-shot" aria-hidden="true">
+            <div class="step-screen">
+              <div class="app">
+              <div class="app-photo"><svg viewBox="135 103 292 367" aria-hidden="true">
+            <g transform="translate(256 306) scale(6.3529) translate(-38 -39)" fill="#8FA383">
+              <path d="M38 39C38 22 30 15 20 9C34 12 41 23 42 34C44 20 53 12 64 8C52 17 45 26 44 39H38Z"/>
+            </g>
+            <g transform="translate(256 352)">
+              <rect x="-108" y="-46" width="216" height="40" rx="14" fill="#B4522F"/>
+              <path d="M-94 2 L94 2 L72 96 Q72 112 54 112 L-54 112 Q-72 112 -72 96 Z" fill="#C88B6A"/>
+            </g>
+          </svg></div>
+              <div class="app-sheet">
+                <div class="app-pad">
+                  <p class="app-eyebrow">Especie</p>
+                  <p class="app-species">Potos</p>
+                  <p class="app-sci">Epipremnum aureum</p>
+                  <div class="app-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.4v5.4" stroke-linecap="round"/><circle cx="12" cy="16.4" r="1.15" fill="currentColor" stroke="none"/></svg><span>3 cosas para mirar</span></div>
+                </div>
+                <div class="app-section">
+                  <div class="app-pad">
+                    <p class="app-eyebrow">Diagnóstico</p>
+                    <p class="app-title">Qué puede estar pasando</p>
+                  </div>
+                  <div class="app-carousel">
+                    <div class="app-card">
+                      <p class="app-cause">Exceso de riego</p>
+                      <div class="app-block">
+                        <p class="app-label">Lo que identificamos</p>
+                        <p class="app-body">Las hojas de abajo amarillean primero y la tierra sigue húmeda desde el último riego.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
         </div>
         <div class="step">
           <span class="n">03</span>
           <h3>Guárdala</h3>
           <p>La planta entra en tu lista con riego, luz y abono ya rellenados. El recordatorio llega solo.</p>
+          <div class="step-shot" aria-hidden="true">
+            <div class="step-screen">
+              <div class="app-plants">
+              <div class="pl-top">
+                <div>
+                  <p class="pl-title">Mis plantas</p>
+                  <p class="pl-count">4 plantas</p>
+                </div>
+                <span class="pl-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5.4v13.2M5.4 12h13.2"/></svg></span>
+              </div>
+              <div class="pl-tabs">
+                <span class="is-on">Plantas</span>
+                <span>Tareas</span>
+                <span>Análisis</span>
+              </div>
+              <div class="pl-list">
+                <div class="pl-card">
+                  <span class="pl-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 20.6v-7.4" stroke-linecap="round"/><path d="M12 13.2c0-3.3 2.4-5.7 5.7-6-.3 3.3-2.4 5.7-5.7 6Z" stroke-linejoin="round"/><path d="M12 15.4c-3 0-5.2-2-5.5-5 3 .3 5.2 2.1 5.5 5Z" stroke-linejoin="round"/></svg></span>
+                  <div class="pl-texts">
+                    <p class="pl-name">Potos</p>
+                    <p class="pl-meta"><i class="dot-today"></i><span>Regar hoy</span></p>
+                  </div>
+                  <span class="pl-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.5 5.5 6.5 6.5-6.5 6.5"/></svg></span>
+                </div>
+                <div class="pl-card">
+                  <span class="pl-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 20.6v-7.4" stroke-linecap="round"/><path d="M12 13.2c0-3.3 2.4-5.7 5.7-6-.3 3.3-2.4 5.7-5.7 6Z" stroke-linejoin="round"/><path d="M12 15.4c-3 0-5.2-2-5.5-5 3 .3 5.2 2.1 5.5 5Z" stroke-linejoin="round"/></svg></span>
+                  <div class="pl-texts">
+                    <p class="pl-name">Lengua de suegra</p>
+                    <p class="pl-meta"><i class="dot-soon"></i><span>Regar mañana</span></p>
+                  </div>
+                  <span class="pl-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.5 5.5 6.5 6.5-6.5 6.5"/></svg></span>
+                </div>
+                <div class="pl-card">
+                  <span class="pl-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 20.6v-7.4" stroke-linecap="round"/><path d="M12 13.2c0-3.3 2.4-5.7 5.7-6-.3 3.3-2.4 5.7-5.7 6Z" stroke-linejoin="round"/><path d="M12 15.4c-3 0-5.2-2-5.5-5 3 .3 5.2 2.1 5.5 5Z" stroke-linejoin="round"/></svg></span>
+                  <div class="pl-texts">
+                    <p class="pl-name">Costilla de Adán</p>
+                    <p class="pl-meta"><i class="dot-far"></i><span>Regar en 4 días</span></p>
+                  </div>
+                  <span class="pl-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.5 5.5 6.5 6.5-6.5 6.5"/></svg></span>
+                </div>
+                <div class="pl-card">
+                  <span class="pl-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 20.6v-7.4" stroke-linecap="round"/><path d="M12 13.2c0-3.3 2.4-5.7 5.7-6-.3 3.3-2.4 5.7-5.7 6Z" stroke-linejoin="round"/><path d="M12 15.4c-3 0-5.2-2-5.5-5 3 .3 5.2 2.1 5.5 5Z" stroke-linejoin="round"/></svg></span>
+                  <div class="pl-texts">
+                    <p class="pl-name">Zamioculca</p>
+                    <p class="pl-meta"><i class="dot-far"></i><span>Regar en 9 días</span></p>
+                  </div>
+                  <span class="pl-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.5 5.5 6.5 6.5-6.5 6.5"/></svg></span>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -125,40 +334,111 @@
       <div>
         <p class="eyebrow">La parte que lo cambia todo</p>
         <h2>Una hoja amarilla nunca tiene una sola causa</h2>
-        <p>Regada ayer y amarilleando es exceso de agua. Dos semanas sin riego y amarilleando es justo lo contrario. El síntoma es el mismo, la causa es opuesta.</p>
-        <p>Por eso Broto <strong>nunca da un veredicto único</strong>. Ordena las causas por probabilidad y te da la prueba que las separa — lo que una app de fotos normalmente no hace.</p>
+        <p>Regada ayer y amarilleando es exceso de agua. Dos semanas sin riego y amarilleando es lo contrario.</p>
+        <p>Mismo síntoma, causa opuesta. Por eso Broto <strong>no da un veredicto único</strong>: ordena las causas y te da la prueba que lo decide.</p>
       </div>
-      <div class="quote">
-        <p class="eyebrow">Cómo confirmarlo</p>
-        <p>Mete el dedo tres centímetros en la tierra. Si sale húmedo, es exceso de riego — no es hongo.</p>
+      <div class="cutout" aria-hidden="true">
+        <div class="app">
+          <p class="app-eyebrow">Prueba en casa</p>
+          <p class="app-title">Cómo confirmar el problema</p>
+          <div class="app-confirm"><p>Mete el dedo tres centímetros en la tierra. Si sale húmedo, es exceso de riego — no es hongo.</p></div>
+        </div>
       </div>
     </div>
   </section>
 
   <section>
     <div class="wrap split">
-      <div>
-        <p class="water-bar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6c3.6 4.3 6.2 7.7 6.2 10.7A6.2 6.2 0 0 1 12 19.5a6.2 6.2 0 0 1-6.2-6.2c0-3 2.6-6.4 6.2-10.7Z"/></svg>2 plantas para regar hoy</p>
+      <div class="lock-phone" aria-hidden="true">
+        <div class="lock-screen">
+          <p class="lock-date">lunes, 24 de agosto</p>
+          <p class="lock-time">09:00</p>
+
+          <div class="notif">
+            <span class="notif-icon"><svg viewBox="135 103 292 367" aria-hidden="true">
+        <g transform="translate(256 306) scale(6.3529) translate(-38 -39)" fill="#3E6B4A">
+          <path d="M38 39C38 22 30 15 20 9C34 12 41 23 42 34C44 20 53 12 64 8C52 17 45 26 44 39H38Z"/>
+        </g>
+        <g transform="translate(256 352)">
+          <rect x="-108" y="-46" width="216" height="40" rx="14" fill="#B4522F"/>
+          <path d="M-94 2 L94 2 L72 96 Q72 112 54 112 L-54 112 Q-72 112 -72 96 Z" fill="#C88B6A"/>
+        </g>
+      </svg></span>
+            <div class="notif-texts">
+              <p class="notif-app"><span>Broto</span><span>ahora</span></p>
+              <p class="notif-title">Tus plantas</p>
+              <p class="notif-text">2 plantas piden cuidado hoy</p>
+            </div>
+          </div>
+
+          <span class="lock-bar"></span>
+        </div>
       </div>
       <div>
         <p class="eyebrow">Recordatorios</p>
         <h2>Un recordatorio que no se vuelve spam</h2>
-        <p>Una barra arriba dice cuántas plantas necesitan agua hoy. Es el único bloque de color lleno de toda la app, y es a propósito: abres, miras y cierras.</p>
-        <p>La hora la eliges tú, en tu huso horario. Sin “consejo del día”, sin notificaciones inventadas para traerte de vuelta.</p>
+        <p><strong>Un aviso al día</strong>, a la hora que eliges, juntando todo lo que necesita cuidado. No es uno por planta.</p>
+        <p>Sin “consejo del día”, sin avisos inventados para traerte de vuelta.</p>
       </div>
     </div>
   </section>
 
-  <section>
+  <section class="is-feature">
     <div class="wrap split">
       <div>
+        <svg class="feature-art" viewBox="0 0 200 200" aria-hidden="true">
+          <circle cx="100" cy="100" r="92" fill="#DDE3D6"/>
+          <g transform="translate(100 118)">
+            <path d="M-30 -6 L30 -6 L23 46 Q0 52 -23 46 Z" fill="#C88B6A"/>
+            <rect x="-34" y="-14" width="68" height="14" rx="7" fill="#B4522F"/>
+          </g>
+          <g transform="translate(100 74)">
+            <path d="M-4 34 L-4 6 Q-4 -2 4 -2 L4 34 Z" fill="#6E8265"/>
+            <g transform="translate(-30 -6) rotate(-24)"><ellipse cx="-16" cy="0" rx="22" ry="13" fill="#7C9070"/></g>
+            <g transform="translate(30 -6) rotate(24)"><ellipse cx="16" cy="0" rx="22" ry="13" fill="#7C9070"/></g>
+            <circle cx="0" cy="-14" r="40" fill="#8FA383"/>
+            <path d="M0 -54 Q10 -66 2 -76 Q-2 -66 -6 -60 Z" fill="#6E8265"/>
+            <g transform="translate(0 -12)">
+              <ellipse cx="-21" cy="4" rx="4.2" ry="2.8" fill="#B4522F" opacity="0.28"/>
+              <ellipse cx="21" cy="4" rx="4.2" ry="2.8" fill="#B4522F" opacity="0.28"/>
+              <circle cx="-13" cy="-4" r="4.6" fill="#17251A"/>
+              <circle cx="13" cy="-4" r="4.6" fill="#17251A"/>
+              <circle cx="-11.4" cy="-5.8" r="1.7" fill="#FFFDF8"/>
+              <circle cx="14.6" cy="-5.8" r="1.7" fill="#FFFDF8"/>
+              <path d="M-7 7 Q0 13.5 7 7" fill="none" stroke="#17251A" stroke-width="2.6" stroke-linecap="round"/>
+            </g>
+          </g>
+        </svg>
         <p class="eyebrow">Brotinho</p>
         <h2>Para cuando la duda sigue ahí</h2>
-        <p>Brotinho ve las plantas que guardaste, así que puedes preguntar por una de ellas directamente — sin explicar otra vez cuál es la especie ni cuándo la regaste.</p>
+        <p>Ya conoce tus plantas. Pregunta directo, sin explicar otra vez cuál es la especie ni cuándo la regaste.</p>
       </div>
-      <div class="quote">
-        <p class="eyebrow">Tú preguntas</p>
-        <p>“¿Puedo dejar el potos en el baño?” — “Puedes. Le gusta la humedad, pero necesita luz indirecta: si el baño no tiene ventana, se estira y pierde hojas.”</p>
+      <div class="cutout" aria-hidden="true">
+        <div class="chat-row">
+          <p class="bubble bubble-user">¿Puedo dejar el potos en el baño?</p>
+        </div>
+
+        <div class="chat-row chat-bot">
+          <span class="chat-face"><svg viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="48" fill="#8FA383"/>
+            <path d="M50 8 Q60 -4 52 -14" fill="none" stroke="#6E8265" stroke-width="5" stroke-linecap="round"/>
+            <g transform="translate(50 52) scale(1.15)">
+              <ellipse cx="-21" cy="4" rx="4.2" ry="2.8" fill="#B4522F" opacity="0.28"/>
+              <ellipse cx="21" cy="4" rx="4.2" ry="2.8" fill="#B4522F" opacity="0.28"/>
+              <circle cx="-13" cy="-4" r="4.6" fill="#17251A"/>
+              <circle cx="13" cy="-4" r="4.6" fill="#17251A"/>
+              <circle cx="-11.4" cy="-5.8" r="1.7" fill="#FFFDF8"/>
+              <circle cx="14.6" cy="-5.8" r="1.7" fill="#FFFDF8"/>
+              <path d="M-7 7 Q0 13.5 7 7" fill="none" stroke="#17251A" stroke-width="2.6" stroke-linecap="round"/>
+            </g>
+          </svg></span>
+          <p class="bubble bubble-bot">Puedes. Le gusta la humedad, pero necesita luz indirecta — si el baño no tiene ventana, se estira y pierde hojas.</p>
+        </div>
+
+        <div class="chat-composer">
+          <p class="chat-field">Escribe tu pregunta</p>
+          <span class="chat-send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5.6M5.8 11.8 12 5.6l6.2 6.2"/></svg></span>
+        </div>
       </div>
     </div>
   </section>
@@ -195,7 +475,7 @@
           <i><svg viewBox="0 0 14 14" aria-hidden="true"><rect x="1.5" y="6" width="11" height="2" rx="1" fill="currentColor"/></svg></i>
           <div>
             <h3>No cobra por su propio fallo</h3>
-            <p>Si el modelo no consigue leer la foto, el crédito vuelve al momento y la app lo avisa en pantalla.</p>
+            <p>Si el modelo no consigue leer la foto, el crédito vuelve al momento y Broto lo avisa en pantalla.</p>
           </div>
         </div>
         <div class="not">
@@ -221,51 +501,62 @@
       <div class="section-head">
         <p class="eyebrow">Precios</p>
         <h2>Empieza gratis</h2>
-        <p>Guardar plantas, registrar riegos y recibir recordatorios es gratis y sin límite de cantidad. Lo que se cuenta es el análisis por foto.</p>
+        <p>Guardar todas las plantas que quieras, marcar que las regaste y recibir recordatorios no cuesta nada. Lo que se cuenta es el análisis por foto.</p>
       </div>
       <div class="plans">
         <div class="plan">
           <p class="tag">Gratis</p>
-          <p class="price">R$ 0</p>
+          <p class="price">R$ 0</p>
           <p class="per">para siempre</p>
           <ul>
             <li>3 análisis el primer mes</li>
             <li>1 análisis al mes después</li>
             <li>Plantas y recordatorios sin límite</li>
           </ul>
+          
         </div>
         <div class="plan">
           <p class="tag">Suelto</p>
-          <p class="price">R$ 1,90</p>
+          <p class="price">R$ 1,90</p>
           <p class="per">por análisis</p>
           <ul>
             <li>No caduca</li>
             <li>Sin límite de cuántos compras</li>
             <li>Sin suscripción</li>
           </ul>
+          
         </div>
         <div class="plan is-lead">
           <p class="tag">Completo</p>
-          <p class="price">R$ 12,90</p>
-          <p class="per">al mes · R$ 119,90 al año</p>
+          <p class="price">R$ 12,90</p>
+          <p class="per">al mes</p>
           <ul>
             <li>40 análisis al mes</li>
             <li>150 mensajes de Brotinho al mes</li>
             <li>Todas las tareas de cuidado</li>
           </ul>
+          <div class="plan-year">
+            <p class="plan-year-top"><b>R$ 119,90</b><span>anual</span></p>
+            <p class="plan-year-note"><strong>Ahorra R$ 34,90</strong> · sale a R$ 9,99 al mes</p>
+          </div>
         </div>
         <div class="plan">
           <p class="tag">Brotinho</p>
-          <p class="price">R$ 4,90</p>
-          <p class="per">al mes · R$ 49,90 al año</p>
+          <p class="price">R$ 4,90</p>
+          <p class="per">al mes</p>
           <ul>
             <li>150 mensajes al mes</li>
             <li>Solo el chat</li>
             <li>Los análisis siguen los del plan gratis</li>
           </ul>
+          <div class="plan-year">
+            <p class="plan-year-top"><b>R$ 49,90</b><span>anual</span></p>
+            <p class="plan-year-note"><strong>Ahorra R$ 8,90</strong> · sale a R$ 4,16 al mes</p>
+          </div>
         </div>
       </div>
-      <p class="fineprint">Los números son esos: ningún plan se llama “ilimitado”. La suscripción la cobra la App Store o Google Play y se cancela en la propia tienda. Detalles en <a href="/es/reembolso">Suscripción y reembolsos</a>.</p>
+      <p class="no-unlimited"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.4v5.4" stroke-linecap="round"/><circle cx="12" cy="16.4" r="1.15" fill="currentColor" stroke="none"/></svg><span><strong>Ningún plan es ilimitado.</strong> Los números de arriba son los que valen, y son los mismos en los Términos y en la ficha de la tienda.</span></p>
+      <p class="fineprint">La suscripción la cobra la App Store o Google Play y se cancela en la propia tienda. Detalles en <a href="/es/reembolso">Suscripción y reembolsos</a>.</p>
     </div>
   </section>
 

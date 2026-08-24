@@ -51,7 +51,7 @@ async function render(url, push) {
   if (push) history.pushState({}, "", url);
 
   const hash = new URL(url, location.origin).hash;
-  const anchor = /^#[w-]+$/.test(hash) ? document.querySelector(hash) : null;
+  const anchor = /^#[\w-]+$/.test(hash) ? document.querySelector(hash) : null;
 
   if (anchor) anchor.scrollIntoView({ block: "start", behavior: "auto" });
   else window.scrollTo({ top: 0, behavior: "auto" });

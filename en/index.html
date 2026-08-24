@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Broto · One photo and you know what your plant has</title>
+<title>Broto</title>
 <meta name="description" content="Broto identifies the species from a photo, ranks the likely causes of the problem and gives you a test to confirm it at home. Then it reminds you to water.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Broto · One photo and you know what your plant has">
@@ -38,11 +38,14 @@
       <a href="#pricing">Pricing</a>
       <a href="/en/help">Help</a>
     </nav>
-    <div class="langs">
-      <a href="/" hreflang="pt-BR">pt</a>
-      <a href="/en" aria-current="true">en</a>
-      <a href="/es" hreflang="es">es</a>
-    </div>
+    <details class="langs">
+      <summary aria-label="Language"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3.2 9.4h17.6M3.2 14.6h17.6"/><path d="M12 3a15.6 15.6 0 0 0 0 18 15.6 15.6 0 0 0 0-18Z"/></svg><span>English</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9.5 6 6 6-6"/></svg></summary>
+      <div class="langs-menu">
+        <a href="/" hreflang="pt-BR">Português</a>
+        <a href="/en" aria-current="true">English</a>
+        <a href="/es" hreflang="es">Español</a>
+      </div>
+    </details>
   </div>
 </header>
 
@@ -51,17 +54,19 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="eyebrow">Identify · diagnose · remember</p>
+        <p class="eyebrow">Identification · diagnosis · reminders</p>
         <h1>One photo, and you know what your plant has</h1>
         <p class="lede">Take a picture of the plant. Broto gives you the species, how to care for it and, when something is wrong, the likely causes in order — with a test you can run at home to tell which one it is.</p>
         <p class="soon"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="6.4"/><path d="M8 4.4V8l2.6 1.6" stroke-linecap="round"/></svg>Coming soon to the App Store and Google Play</p>
-        <p class="hero-note">3 analyses in your first month, no card required.</p>
+        <p class="hero-note">3 analyses in your first month, no charge at all.</p>
       </div>
 
       <div class="phone" aria-hidden="true">
         <div class="phone-screen">
-          <div class="shot-photo">
-            <svg viewBox="135 103 292 367" aria-hidden="true">
+          <div class="app">
+
+            <div class="app-photo">
+              <svg viewBox="135 103 292 367" aria-hidden="true">
             <g transform="translate(256 306) scale(6.3529) translate(-38 -39)" fill="#8FA383">
               <path d="M38 39C38 22 30 15 20 9C34 12 41 23 42 34C44 20 53 12 64 8C52 17 45 26 44 39H38Z"/>
             </g>
@@ -70,23 +75,98 @@
               <path d="M-94 2 L94 2 L72 96 Q72 112 54 112 L-54 112 Q-72 112 -72 96 Z" fill="#C88B6A"/>
             </g>
           </svg>
-          </div>
-          <div class="shot">
-            <p class="eyebrow">Species</p>
-            <p class="shot-name">Pothos</p>
-            <p class="shot-sci">Epipremnum aureum</p>
-
-            <div class="shot-card">
-              <p class="eyebrow">What it could be</p>
-              <p class="shot-row"><i class="dot"></i><b>Overwatering</b><span class="rank">high</span></p>
-              <p class="shot-row"><i class="dot is-mid"></i><b>Too little light</b><span class="rank">medium</span></p>
-              <p class="shot-row"><i class="dot is-low"></i><b>Root fungus</b><span class="rank">low</span></p>
             </div>
 
-            <div class="shot-confirm">
-              <p class="eyebrow">How to confirm</p>
-              <p>Push a finger three centimetres into the soil. If it comes out damp, it is overwatering — not fungus.</p>
+            <div class="app-sheet">
+              <div class="app-pad">
+                <p class="app-eyebrow">Species</p>
+                <p class="app-species">Pothos</p>
+                <p class="app-sci">Epipremnum aureum</p>
+                <div class="app-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.4v5.4" stroke-linecap="round"/><circle cx="12" cy="16.4" r="1.15" fill="currentColor" stroke="none"/></svg><span>3 things to look at</span></div>
+              </div>
+
+              <div class="app-section">
+                <div class="app-pad">
+                  <p class="app-eyebrow">Diagnosis</p>
+                  <p class="app-title">What might be going on</p>
+                  <p class="app-hint">Swipe to see the others</p>
+                </div>
+
+                <div class="app-carousel">
+                  <div class="app-card">
+                    <p class="app-cause">Overwatering</p>
+                    <div class="app-block">
+                      <p class="app-label">What we spotted</p>
+                      <p class="app-body">The lower leaves yellow first and the soil is still damp from the last watering.</p>
+                    </div>
+                    <div class="app-block">
+                      <p class="app-label">What to do</p>
+                      <p class="app-body">Let the soil dry three fingers deep before watering again, and check the pot has a hole.</p>
+                    </div>
+                  </div>
+                  <div class="app-card">
+                    <p class="app-cause">Too little light</p>
+                    <div class="app-block">
+                      <p class="app-label">What we spotted</p>
+                      <p class="app-body">Stretched stem and new leaves smaller than the old ones.</p>
+                    </div>
+                    <div class="app-block">
+                      <p class="app-label">What to do</p>
+                      <p class="app-body">Move it closer to a window, with no sun hitting the leaves directly.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="app-dots"><i class="is-on"></i><i></i><i></i></div>
+              </div>
+
+              <div class="app-section app-pad">
+                <p class="app-eyebrow">Test at home</p>
+                <p class="app-title">How to confirm the problem</p>
+                <div class="app-confirm"><p>Push a finger three centimetres into the soil. If it comes out damp, it is overwatering — not fungus.</p></div>
+              </div>
+
+              <div class="app-section app-pad">
+                <p class="app-eyebrow">Care</p>
+                <div class="app-care">
+                  <div class="app-care-row">
+                    <span class="app-care-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3.4c3.4 4 5.9 7.2 5.9 10A5.9 5.9 0 0 1 12 19.3 5.9 5.9 0 0 1 6.1 13.4c0-2.8 2.5-6 5.9-10Z" stroke-linejoin="round"/></svg></span>
+                    <div class="app-care-texts">
+                      <p class="app-label">Water</p>
+                      <p class="app-care-value">Every 7 days</p>
+                      
+                    </div>
+                  </div>
+                  <div class="app-care-row">
+                    <span class="app-care-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4.1"/><path d="M12 2.8v2.1M12 19.1v2.1M4.4 4.4l1.5 1.5M18.1 18.1l1.5 1.5M2.8 12h2.1M19.1 12h2.1M4.4 19.6l1.5-1.5M18.1 5.9l1.5-1.5" stroke-linecap="round"/></svg></span>
+                    <div class="app-care-texts">
+                      <p class="app-label">Light</p>
+                      <p class="app-care-value">Bright indirect</p>
+                      <p class="app-care-note">Near a window, with no direct sun.</p>
+                    </div>
+                  </div>
+                  <div class="app-care-row">
+                    <span class="app-care-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 20.6v-7.4" stroke-linecap="round"/><path d="M12 13.2c0-3.3 2.4-5.7 5.7-6-.3 3.3-2.4 5.7-5.7 6Z" stroke-linejoin="round"/><path d="M12 15.4c-3 0-5.2-2-5.5-5 3 .3 5.2 2.1 5.5 5Z" stroke-linejoin="round"/></svg></span>
+                    <div class="app-care-texts">
+                      <p class="app-label">Fertilizer</p>
+                      <p class="app-care-value">Monthly</p>
+                      <p class="app-care-note">Spring and summer only.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="app-pad">
+                <div class="app-toxic">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><ellipse cx="7.3" cy="9.5" rx="1.9" ry="2.5"/><ellipse cx="12" cy="7.7" rx="1.9" ry="2.6"/><ellipse cx="16.7" cy="9.5" rx="1.9" ry="2.5"/><path d="M12 12.3c2.7 0 4.9 2.1 4.9 4.2 0 1.6-1.1 2.6-2.7 2.6-1 0-1.5-.4-2.2-.4s-1.2.4-2.2.4c-1.6 0-2.7-1-2.7-2.6 0-2.1 2.2-4.2 4.9-4.2Z"/></svg>
+                  <div>
+                    <p class="app-toxic-title">Toxic to pets</p>
+                    <p class="app-toxic-text">Keep it away from cats and dogs. This does not replace a vet.</p>
+                  </div>
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -104,17 +184,146 @@
         <div class="step">
           <span class="n">01</span>
           <h3>Take the photo</h3>
-          <p>Frame the whole plant. If one leaf looks off, take a second photo of it — or skip. The app asks nothing else.</p>
+          <p>Frame the whole plant. If one leaf looks off, take a second photo of it — or skip. Broto asks nothing else.</p>
+          <div class="step-shot" aria-hidden="true">
+            <div class="step-screen is-dark">
+              <div class="app-camera">
+              <div class="cam-view">
+                <div class="cam-guide"><svg viewBox="135 103 292 367" aria-hidden="true">
+            <g transform="translate(256 306) scale(6.3529) translate(-38 -39)" fill="#8FA383">
+              <path d="M38 39C38 22 30 15 20 9C34 12 41 23 42 34C44 20 53 12 64 8C52 17 45 26 44 39H38Z"/>
+            </g>
+            <g transform="translate(256 352)">
+              <rect x="-108" y="-46" width="216" height="40" rx="14" fill="#B4522F"/>
+              <path d="M-94 2 L94 2 L72 96 Q72 112 54 112 L-54 112 Q-72 112 -72 96 Z" fill="#C88B6A"/>
+            </g>
+          </svg></div>
+                <div class="cam-top">
+                  <span class="cam-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></span>
+                  <span class="cam-actions">
+                    <span class="cam-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M9.6 9.4a2.5 2.5 0 1 1 3.3 2.4c-.6.2-.9.7-.9 1.3v.5" stroke-linecap="round"/><circle cx="12" cy="17" r="1.05" fill="currentColor" stroke="none"/></svg></span>
+                    <span class="cam-circle"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.4 2 5.6 13.2h5L9.8 22l8.4-11.8h-5.4L13.4 2Z"/></svg></span>
+                  </span>
+                </div>
+                <div class="cam-hint">
+                  <p class="cam-hint-title">Frame the whole plant</p>
+                  <p class="cam-hint-text">Pot and leaves in the shot.<br>That is what shows the species.</p>
+                </div>
+              </div>
+              <div class="cam-bar">
+                <div class="cam-action">
+                  <span class="cam-side"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3.2" y="4.6" width="17.6" height="14.8" rx="2.6"/><circle cx="8.6" cy="9.8" r="1.6"/><path d="m4.4 17.2 4.8-4.6 3.4 3.2 2.8-2.4 4.2 3.8" stroke-linejoin="round"/></svg></span>
+                  <span class="cam-label">Gallery</span>
+                </div>
+                <div class="cam-action">
+                  <span class="cam-shutter"><span class="cam-core"></span></span>
+                  <span class="cam-label">Take photo</span>
+                </div>
+                <div class="cam-action"><span class="cam-ph"></span></div>
+              </div>
+            </div>
+            </div>
+          </div>
         </div>
         <div class="step">
           <span class="n">02</span>
           <h3>Find out</h3>
           <p>Species, care, and if something is wrong, the likely causes in order. One photo, one answer.</p>
+          <div class="step-shot" aria-hidden="true">
+            <div class="step-screen">
+              <div class="app">
+              <div class="app-photo"><svg viewBox="135 103 292 367" aria-hidden="true">
+            <g transform="translate(256 306) scale(6.3529) translate(-38 -39)" fill="#8FA383">
+              <path d="M38 39C38 22 30 15 20 9C34 12 41 23 42 34C44 20 53 12 64 8C52 17 45 26 44 39H38Z"/>
+            </g>
+            <g transform="translate(256 352)">
+              <rect x="-108" y="-46" width="216" height="40" rx="14" fill="#B4522F"/>
+              <path d="M-94 2 L94 2 L72 96 Q72 112 54 112 L-54 112 Q-72 112 -72 96 Z" fill="#C88B6A"/>
+            </g>
+          </svg></div>
+              <div class="app-sheet">
+                <div class="app-pad">
+                  <p class="app-eyebrow">Species</p>
+                  <p class="app-species">Pothos</p>
+                  <p class="app-sci">Epipremnum aureum</p>
+                  <div class="app-status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.4v5.4" stroke-linecap="round"/><circle cx="12" cy="16.4" r="1.15" fill="currentColor" stroke="none"/></svg><span>3 things to look at</span></div>
+                </div>
+                <div class="app-section">
+                  <div class="app-pad">
+                    <p class="app-eyebrow">Diagnosis</p>
+                    <p class="app-title">What might be going on</p>
+                  </div>
+                  <div class="app-carousel">
+                    <div class="app-card">
+                      <p class="app-cause">Overwatering</p>
+                      <div class="app-block">
+                        <p class="app-label">What we spotted</p>
+                        <p class="app-body">The lower leaves yellow first and the soil is still damp from the last watering.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
         </div>
         <div class="step">
           <span class="n">03</span>
           <h3>Save it</h3>
           <p>The plant joins your list with watering, light and feeding already filled in. The reminder comes on its own.</p>
+          <div class="step-shot" aria-hidden="true">
+            <div class="step-screen">
+              <div class="app-plants">
+              <div class="pl-top">
+                <div>
+                  <p class="pl-title">My plants</p>
+                  <p class="pl-count">4 plants</p>
+                </div>
+                <span class="pl-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5.4v13.2M5.4 12h13.2"/></svg></span>
+              </div>
+              <div class="pl-tabs">
+                <span class="is-on">Plants</span>
+                <span>Tasks</span>
+                <span>Analyses</span>
+              </div>
+              <div class="pl-list">
+                <div class="pl-card">
+                  <span class="pl-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 20.6v-7.4" stroke-linecap="round"/><path d="M12 13.2c0-3.3 2.4-5.7 5.7-6-.3 3.3-2.4 5.7-5.7 6Z" stroke-linejoin="round"/><path d="M12 15.4c-3 0-5.2-2-5.5-5 3 .3 5.2 2.1 5.5 5Z" stroke-linejoin="round"/></svg></span>
+                  <div class="pl-texts">
+                    <p class="pl-name">Pothos</p>
+                    <p class="pl-meta"><i class="dot-today"></i><span>Water today</span></p>
+                  </div>
+                  <span class="pl-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.5 5.5 6.5 6.5-6.5 6.5"/></svg></span>
+                </div>
+                <div class="pl-card">
+                  <span class="pl-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 20.6v-7.4" stroke-linecap="round"/><path d="M12 13.2c0-3.3 2.4-5.7 5.7-6-.3 3.3-2.4 5.7-5.7 6Z" stroke-linejoin="round"/><path d="M12 15.4c-3 0-5.2-2-5.5-5 3 .3 5.2 2.1 5.5 5Z" stroke-linejoin="round"/></svg></span>
+                  <div class="pl-texts">
+                    <p class="pl-name">Snake plant</p>
+                    <p class="pl-meta"><i class="dot-soon"></i><span>Water tomorrow</span></p>
+                  </div>
+                  <span class="pl-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.5 5.5 6.5 6.5-6.5 6.5"/></svg></span>
+                </div>
+                <div class="pl-card">
+                  <span class="pl-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 20.6v-7.4" stroke-linecap="round"/><path d="M12 13.2c0-3.3 2.4-5.7 5.7-6-.3 3.3-2.4 5.7-5.7 6Z" stroke-linejoin="round"/><path d="M12 15.4c-3 0-5.2-2-5.5-5 3 .3 5.2 2.1 5.5 5Z" stroke-linejoin="round"/></svg></span>
+                  <div class="pl-texts">
+                    <p class="pl-name">Monstera</p>
+                    <p class="pl-meta"><i class="dot-far"></i><span>Water in 4 days</span></p>
+                  </div>
+                  <span class="pl-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.5 5.5 6.5 6.5-6.5 6.5"/></svg></span>
+                </div>
+                <div class="pl-card">
+                  <span class="pl-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 20.6v-7.4" stroke-linecap="round"/><path d="M12 13.2c0-3.3 2.4-5.7 5.7-6-.3 3.3-2.4 5.7-5.7 6Z" stroke-linejoin="round"/><path d="M12 15.4c-3 0-5.2-2-5.5-5 3 .3 5.2 2.1 5.5 5Z" stroke-linejoin="round"/></svg></span>
+                  <div class="pl-texts">
+                    <p class="pl-name">ZZ plant</p>
+                    <p class="pl-meta"><i class="dot-far"></i><span>Water in 9 days</span></p>
+                  </div>
+                  <span class="pl-chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9.5 5.5 6.5 6.5-6.5 6.5"/></svg></span>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -125,40 +334,111 @@
       <div>
         <p class="eyebrow">The part that changes everything</p>
         <h2>A yellow leaf never has just one cause</h2>
-        <p>Watered yesterday and turning yellow means too much water. Two weeks without water and turning yellow means exactly the opposite. Same symptom, opposite cause.</p>
-        <p>That is why Broto <strong>never gives a single verdict</strong>. It ranks the causes by likelihood and hands you the test that tells them apart — the thing a photo app usually does not do.</p>
+        <p>Watered yesterday and turning yellow means too much water. Two weeks dry and turning yellow means the opposite.</p>
+        <p>Same symptom, opposite cause. So Broto <strong>never gives one verdict</strong>: it ranks the causes and hands you the test that settles it.</p>
       </div>
-      <div class="quote">
-        <p class="eyebrow">How to confirm</p>
-        <p>Push a finger three centimetres into the soil. If it comes out damp, it is overwatering — not fungus.</p>
+      <div class="cutout" aria-hidden="true">
+        <div class="app">
+          <p class="app-eyebrow">Test at home</p>
+          <p class="app-title">How to confirm the problem</p>
+          <div class="app-confirm"><p>Push a finger three centimetres into the soil. If it comes out damp, it is overwatering — not fungus.</p></div>
+        </div>
       </div>
     </div>
   </section>
 
   <section>
     <div class="wrap split">
-      <div>
-        <p class="water-bar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6c3.6 4.3 6.2 7.7 6.2 10.7A6.2 6.2 0 0 1 12 19.5a6.2 6.2 0 0 1-6.2-6.2c0-3 2.6-6.4 6.2-10.7Z"/></svg>2 plants to water today</p>
+      <div class="lock-phone" aria-hidden="true">
+        <div class="lock-screen">
+          <p class="lock-date">Monday, August 24</p>
+          <p class="lock-time">09:00</p>
+
+          <div class="notif">
+            <span class="notif-icon"><svg viewBox="135 103 292 367" aria-hidden="true">
+        <g transform="translate(256 306) scale(6.3529) translate(-38 -39)" fill="#3E6B4A">
+          <path d="M38 39C38 22 30 15 20 9C34 12 41 23 42 34C44 20 53 12 64 8C52 17 45 26 44 39H38Z"/>
+        </g>
+        <g transform="translate(256 352)">
+          <rect x="-108" y="-46" width="216" height="40" rx="14" fill="#B4522F"/>
+          <path d="M-94 2 L94 2 L72 96 Q72 112 54 112 L-54 112 Q-72 112 -72 96 Z" fill="#C88B6A"/>
+        </g>
+      </svg></span>
+            <div class="notif-texts">
+              <p class="notif-app"><span>Broto</span><span>now</span></p>
+              <p class="notif-title">Your plants</p>
+              <p class="notif-text">2 plants need care today</p>
+            </div>
+          </div>
+
+          <span class="lock-bar"></span>
+        </div>
       </div>
       <div>
         <p class="eyebrow">Reminders</p>
         <h2>A reminder that never becomes spam</h2>
-        <p>A bar at the top tells you how many plants need water today. It is the only block of full colour in the whole app, and that is on purpose: you open it, look, and close it.</p>
-        <p>You choose the time, in your own timezone. No “tip of the day”, no notification invented to pull you back in.</p>
+        <p><strong>One notice a day</strong>, at the time you choose, grouping everything that needs care. Not one per plant.</p>
+        <p>No “tip of the day”, no alert invented to pull you back in.</p>
       </div>
     </div>
   </section>
 
-  <section>
+  <section class="is-feature">
     <div class="wrap split">
       <div>
+        <svg class="feature-art" viewBox="0 0 200 200" aria-hidden="true">
+          <circle cx="100" cy="100" r="92" fill="#DDE3D6"/>
+          <g transform="translate(100 118)">
+            <path d="M-30 -6 L30 -6 L23 46 Q0 52 -23 46 Z" fill="#C88B6A"/>
+            <rect x="-34" y="-14" width="68" height="14" rx="7" fill="#B4522F"/>
+          </g>
+          <g transform="translate(100 74)">
+            <path d="M-4 34 L-4 6 Q-4 -2 4 -2 L4 34 Z" fill="#6E8265"/>
+            <g transform="translate(-30 -6) rotate(-24)"><ellipse cx="-16" cy="0" rx="22" ry="13" fill="#7C9070"/></g>
+            <g transform="translate(30 -6) rotate(24)"><ellipse cx="16" cy="0" rx="22" ry="13" fill="#7C9070"/></g>
+            <circle cx="0" cy="-14" r="40" fill="#8FA383"/>
+            <path d="M0 -54 Q10 -66 2 -76 Q-2 -66 -6 -60 Z" fill="#6E8265"/>
+            <g transform="translate(0 -12)">
+              <ellipse cx="-21" cy="4" rx="4.2" ry="2.8" fill="#B4522F" opacity="0.28"/>
+              <ellipse cx="21" cy="4" rx="4.2" ry="2.8" fill="#B4522F" opacity="0.28"/>
+              <circle cx="-13" cy="-4" r="4.6" fill="#17251A"/>
+              <circle cx="13" cy="-4" r="4.6" fill="#17251A"/>
+              <circle cx="-11.4" cy="-5.8" r="1.7" fill="#FFFDF8"/>
+              <circle cx="14.6" cy="-5.8" r="1.7" fill="#FFFDF8"/>
+              <path d="M-7 7 Q0 13.5 7 7" fill="none" stroke="#17251A" stroke-width="2.6" stroke-linecap="round"/>
+            </g>
+          </g>
+        </svg>
         <p class="eyebrow">Brotinho</p>
         <h2>For when the doubt sticks around</h2>
-        <p>Brotinho can see the plants you saved, so you can ask about one of them directly — without explaining again which species it is and when you watered it.</p>
+        <p>It already knows your plants. Just ask, without explaining again which species it is and when you watered it.</p>
       </div>
-      <div class="quote">
-        <p class="eyebrow">You ask</p>
-        <p>“Can I keep the pothos in the bathroom?” — “You can. It likes the humidity, but it needs indirect light: if the bathroom has no window it will stretch out and drop leaves.”</p>
+      <div class="cutout" aria-hidden="true">
+        <div class="chat-row">
+          <p class="bubble bubble-user">Can I keep the pothos in the bathroom?</p>
+        </div>
+
+        <div class="chat-row chat-bot">
+          <span class="chat-face"><svg viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="48" fill="#8FA383"/>
+            <path d="M50 8 Q60 -4 52 -14" fill="none" stroke="#6E8265" stroke-width="5" stroke-linecap="round"/>
+            <g transform="translate(50 52) scale(1.15)">
+              <ellipse cx="-21" cy="4" rx="4.2" ry="2.8" fill="#B4522F" opacity="0.28"/>
+              <ellipse cx="21" cy="4" rx="4.2" ry="2.8" fill="#B4522F" opacity="0.28"/>
+              <circle cx="-13" cy="-4" r="4.6" fill="#17251A"/>
+              <circle cx="13" cy="-4" r="4.6" fill="#17251A"/>
+              <circle cx="-11.4" cy="-5.8" r="1.7" fill="#FFFDF8"/>
+              <circle cx="14.6" cy="-5.8" r="1.7" fill="#FFFDF8"/>
+              <path d="M-7 7 Q0 13.5 7 7" fill="none" stroke="#17251A" stroke-width="2.6" stroke-linecap="round"/>
+            </g>
+          </svg></span>
+          <p class="bubble bubble-bot">You can. It likes the humidity, but it needs indirect light — if the bathroom has no window it will stretch out and drop leaves.</p>
+        </div>
+
+        <div class="chat-composer">
+          <p class="chat-field">Write your question</p>
+          <span class="chat-send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5.6M5.8 11.8 12 5.6l6.2 6.2"/></svg></span>
+        </div>
       </div>
     </div>
   </section>
@@ -195,7 +475,7 @@
           <i><svg viewBox="0 0 14 14" aria-hidden="true"><rect x="1.5" y="6" width="11" height="2" rx="1" fill="currentColor"/></svg></i>
           <div>
             <h3>Never charges for its own failure</h3>
-            <p>If the model cannot read the photo, the credit comes straight back and the app says so on screen.</p>
+            <p>If the model cannot read the photo, the credit comes straight back and Broto says so on screen.</p>
           </div>
         </div>
         <div class="not">
@@ -221,51 +501,62 @@
       <div class="section-head">
         <p class="eyebrow">Pricing</p>
         <h2>Free to start</h2>
-        <p>Saving plants, logging watering and getting reminders is free and has no quantity limit. What is counted is the photo analysis.</p>
+        <p>Saving as many plants as you like, marking them watered and getting reminders costs nothing. What is counted is the photo analysis.</p>
       </div>
       <div class="plans">
         <div class="plan">
           <p class="tag">Free</p>
-          <p class="price">R$ 0</p>
+          <p class="price">R$ 0</p>
           <p class="per">forever</p>
           <ul>
             <li>3 analyses in your first month</li>
             <li>1 analysis a month after that</li>
             <li>Plants and reminders with no limit</li>
           </ul>
+          
         </div>
         <div class="plan">
           <p class="tag">One-off</p>
-          <p class="price">R$ 1.90</p>
+          <p class="price">R$ 1.90</p>
           <p class="per">per analysis</p>
           <ul>
             <li>Never expires</li>
             <li>No limit on how many you buy</li>
             <li>No subscription</li>
           </ul>
+          
         </div>
         <div class="plan is-lead">
           <p class="tag">Complete</p>
-          <p class="price">R$ 12.90</p>
-          <p class="per">a month · R$ 119.90 a year</p>
+          <p class="price">R$ 12.90</p>
+          <p class="per">a month</p>
           <ul>
             <li>40 analyses a month</li>
             <li>150 Brotinho messages a month</li>
             <li>All care tasks</li>
           </ul>
+          <div class="plan-year">
+            <p class="plan-year-top"><b>R$ 119.90</b><span>annual</span></p>
+            <p class="plan-year-note"><strong>Save R$ 34.90</strong> · works out at R$ 9.99 a month</p>
+          </div>
         </div>
         <div class="plan">
           <p class="tag">Brotinho</p>
-          <p class="price">R$ 4.90</p>
-          <p class="per">a month · R$ 49.90 a year</p>
+          <p class="price">R$ 4.90</p>
+          <p class="per">a month</p>
           <ul>
             <li>150 messages a month</li>
             <li>Chat only</li>
             <li>Analyses stay on the free plan</li>
           </ul>
+          <div class="plan-year">
+            <p class="plan-year-top"><b>R$ 49.90</b><span>annual</span></p>
+            <p class="plan-year-note"><strong>Save R$ 8.90</strong> · works out at R$ 4.16 a month</p>
+          </div>
         </div>
       </div>
-      <p class="fineprint">Those are the real numbers: no plan is called “unlimited”. The subscription is billed by the App Store or Google Play and cancelled in the store itself. Details in <a href="/en/refund">Subscription and refunds</a>.</p>
+      <p class="no-unlimited"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.4v5.4" stroke-linecap="round"/><circle cx="12" cy="16.4" r="1.15" fill="currentColor" stroke="none"/></svg><span><strong>No plan is unlimited.</strong> The numbers above are the real ones, and they match the Terms and the store listing.</span></p>
+      <p class="fineprint">The subscription is billed by the App Store or Google Play and cancelled in the store itself. Details in <a href="/en/refund">Subscription and refunds</a>.</p>
     </div>
   </section>
 
