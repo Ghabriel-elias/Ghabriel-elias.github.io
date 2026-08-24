@@ -67,7 +67,7 @@ a:focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; border-ra
   margin-right: auto;
 }
 
-.brand svg { width: 19px; height: 34px; display: block; }
+.brand svg { width: 27px; height: 34px; display: block; }
 
 .brand span {
   font-family: "Fraunces", Georgia, serif;
@@ -313,7 +313,7 @@ main h1:focus:not(:focus-visible) { outline: none; }
   padding: 40px 32px;
 }
 
-.auth-mark { width: 35px; height: 63px; margin: 0 auto 26px; display: block; }
+.auth-mark { width: 50px; height: 63px; margin: 0 auto 26px; display: block; }
 
 .auth h1 {
   font-family: "Fraunces", Georgia, serif;
@@ -590,7 +590,7 @@ main h1:focus:not(:focus-visible) { outline: none; }
   place-items: center;
 }
 
-.shot-photo svg { width: 92px; height: 166px; }
+.shot-photo svg { width: 132px; height: 166px; }
 
 .shot { padding: 18px 17px 22px; }
 
