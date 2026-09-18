@@ -1499,7 +1499,7 @@ main h1:focus:not(:focus-visible) { outline: none; }
 
 /* preços */
 
-.plans { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 
 .plan {
   background: var(--surface);
