@@ -1,0 +1,251 @@
+{
+  "meta": {
+    "title": "Broto",
+    "description": "Broto identifica la especie por la foto, ordena las causas probables del problema y te da una prueba para confirmarlo en casa. Después te recuerda regar.",
+    "ogTitle": "Broto · Una foto y sabes qué le pasa a tu planta"
+  },
+  "hero": {
+    "eyebrow": "Identificación · diagnóstico · recordatorios",
+    "title": "Una foto, y sabes qué le pasa a tu planta",
+    "lede": "Fotografía la planta. Broto devuelve la especie, sus cuidados y, cuando algo va mal, las causas probables en orden — con una prueba que haces en casa para saber cuál es.",
+    "soon": "Muy pronto en la App Store y en Google Play",
+    "note": "3 días con todo desbloqueado, sin ningún cobro."
+  },
+  "mock": {
+    "speciesLabel": "Especie",
+    "species": "Potos",
+    "sci": "Epipremnum aureum",
+    "status": "3 cosas para mirar",
+    "strip": [
+      "Diagnóstico",
+      "Prueba en casa",
+      "Preguntar a Brotinho",
+      "Cuidados"
+    ],
+    "diagnosisEyebrow": "Diagnóstico",
+    "diagnosisTitle": "Qué puede estar pasando",
+    "diagnosisHint": "Desliza para ver las otras",
+    "causes": [
+      {
+        "cause": "Exceso de riego",
+        "blocks": [
+          {
+            "label": "Lo que identificamos",
+            "body": "Las hojas de abajo amarillean primero y la tierra sigue húmeda desde el último riego."
+          },
+          {
+            "label": "Qué hacer",
+            "body": "Espera a que la tierra se seque tres dedos antes de volver a regar y comprueba que la maceta tenga agujero."
+          }
+        ]
+      },
+      {
+        "cause": "Poca luz",
+        "blocks": [
+          {
+            "label": "Lo que identificamos",
+            "body": "Tallo estirado y hojas nuevas más pequeñas que las viejas."
+          },
+          {
+            "label": "Qué hacer",
+            "body": "Acércala a una ventana, sin que el sol dé directo en la hoja."
+          }
+        ]
+      }
+    ],
+    "confirmEyebrow": "Prueba en casa",
+    "confirmTitle": "Cómo confirmar el problema",
+    "confirms": [
+      {
+        "cause": "Exceso de riego",
+        "text": "Mete el dedo tres centímetros en la tierra. Si sale húmedo dos días después de regar, el problema es agua de más — no es hongo."
+      },
+      {
+        "cause": "Poca luz",
+        "text": "Mira el tallo: si se estiró hacia la ventana y la hoja nueva salió más pequeña que las viejas, le falta luz — no es plaga."
+      }
+    ],
+    "careEyebrow": "Cuidados",
+    "care": [
+      {
+        "label": "Agua",
+        "value": "Cada 7 días",
+        "note": ""
+      },
+      {
+        "label": "Luz",
+        "value": "Luz indirecta",
+        "note": "Cerca de una ventana, sin sol directo."
+      },
+      {
+        "label": "Abono",
+        "value": "Mensual",
+        "note": "Solo en primavera y verano."
+      }
+    ],
+    "toxicTitle": "Tóxica para mascotas",
+    "toxicText": "Mantenla lejos de perros y gatos. Esto no sustituye la orientación de un veterinario."
+  },
+  "how": {
+    "eyebrow": "Cómo funciona",
+    "title": "Tres toques y ya está",
+    "lede": "Sin formulario, sin cuestionario, sin “cuál es tu nivel de experiencia”.",
+    "steps": [
+      {
+        "n": "01",
+        "title": "Fotografía",
+        "text": "Encuadra la planta entera, maceta y hojas. <strong>Una sola foto</strong> — Broto no pide ángulos, no pide primeros planos y no pregunta nada más."
+      },
+      {
+        "n": "02",
+        "title": "Descubre",
+        "text": "Especie, cuidados y, si algo va mal, las causas probables en orden. Una foto, una respuesta."
+      },
+      {
+        "n": "03",
+        "title": "Guárdala",
+        "text": "La planta entra en tu lista con riego, luz y abono ya rellenados. El recordatorio llega solo."
+      }
+    ]
+  },
+  "camera": {
+    "hintTitle": "Encuadra la planta entera",
+    "hintText": "Maceta y hojas en la foto.<br/>Es lo que muestra la especie.",
+    "gallery": "Galería",
+    "shutter": "Hacer foto"
+  },
+  "plants": {
+    "title": "Mis plantas",
+    "count": "4 plantas",
+    "tabs": [
+      "Plantas",
+      "Tareas",
+      "Análisis"
+    ],
+    "items": [
+      {
+        "name": "Potos",
+        "when": "Regar hoy"
+      },
+      {
+        "name": "Lengua de suegra",
+        "when": "Regar mañana"
+      },
+      {
+        "name": "Costilla de Adán",
+        "when": "Regar en 4 días"
+      },
+      {
+        "name": "Zamioculca",
+        "when": "Regar en 9 días"
+      }
+    ]
+  },
+  "why": {
+    "eyebrow": "La parte que lo cambia todo",
+    "title": "Una hoja amarilla nunca tiene una sola causa",
+    "first": "Regada ayer y amarilleando es exceso de agua. Dos semanas sin riego y amarilleando es lo contrario.",
+    "second": "Mismo síntoma, causa opuesta. Por eso Broto <strong>no da un veredicto único</strong>: ordena las causas y te da la prueba que lo decide."
+  },
+  "lock": {
+    "date": "lunes, 24 de agosto",
+    "time": "09:00",
+    "app": "Broto",
+    "now": "ahora",
+    "title": "Potos",
+    "text": "Hoy: regar y girar la maceta."
+  },
+  "reminders": {
+    "eyebrow": "Recordatorios",
+    "title": "Un recordatorio que no se vuelve spam",
+    "first": "<strong>Un recordatorio por planta</strong>, a la hora que eliges para cada tarea. Dice su nombre y lo que necesita hoy.",
+    "second": "¿Con retraso? Te lo recuerda otra vez. Sin “consejo del día” y sin contador de racha."
+  },
+  "brotinho": {
+    "eyebrow": "Brotinho",
+    "title": "Para cuando la duda sigue ahí",
+    "text": "Ya conoce tus plantas. Pregunta directo, sin explicar otra vez cuál es la especie ni cuándo la regaste.",
+    "ask": "¿Puedo dejar el potos en el baño?",
+    "answer": "Puedes. Le gusta la humedad, pero necesita luz indirecta — si el baño no tiene ventana, se estira y pierde hojas.",
+    "field": "Escribe tu pregunta"
+  },
+  "nots": {
+    "eyebrow": "Confianza",
+    "title": "Lo que Broto no hace",
+    "items": [
+      {
+        "title": "No da dosis de plaguicidas",
+        "text": "Primero va lo que puedes hacer sin comprar nada: podar la hoja afectada, ajustar el riego, ventilar, aislarla de la planta de al lado. Si hace falta un producto, dice la categoría y manda seguir la etiqueta."
+      },
+      {
+        "title": "No dice si una planta es comestible",
+        "text": "Nunca, ni aunque insistas. No es el tipo de error que se arregla después."
+      },
+      {
+        "title": "No adivina la especie",
+        "text": "Un primer plano de la hoja enferma a veces no muestra la planta. En ese caso dice que no lo sabe y pide una foto de la planta entera."
+      },
+      {
+        "title": "No cobramos por un fallo nuestro",
+        "text": "Si no conseguimos leer tu foto, el crédito vuelve al momento y te lo avisamos en pantalla."
+      },
+      {
+        "title": "No sustituye al veterinario",
+        "text": "El aviso de toxicidad para mascotas aparece, siempre con la advertencia de que es un aviso, no un diagnóstico."
+      },
+      {
+        "title": "No vende tus datos",
+        "text": "No pedimos ubicación precisa, no leemos tu galería — solo la foto que eliges enviar."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Precios",
+    "title": "Empieza gratis",
+    "lede": "Durante los 3 primeros días, todo lo del plan completo es tuyo. Después, guardar plantas, marcar que las regaste y recibir el recordatorio de riego sigue sin costar nada.",
+    "plans": [
+      {
+        "tag": "Gratis",
+        "price": "R$ 0",
+        "per": "3 días con todo",
+        "items": [
+          "Análisis y Brotinho desbloqueados",
+          "Recordatorio de todos los cuidados",
+          "Después, el riego sigue gratis"
+        ]
+      },
+      {
+        "tag": "Suelto",
+        "price": "R$ 1,90",
+        "per": "por análisis",
+        "items": [
+          "No caduca",
+          "Sin límite de cuántos compras",
+          "Sin suscripción"
+        ]
+      },
+      {
+        "tag": "Completo",
+        "price": "R$ 12,90",
+        "per": "al mes",
+        "items": [
+          "40 análisis al mes",
+          "150 mensajes de Brotinho al mes",
+          "Todas las tareas de cuidado"
+        ],
+        "year": {
+          "price": "R$ 119,90",
+          "label": "anual",
+          "note": "<strong>Ahorra R$ 34,90</strong> · sale a R$ 9,99 al mes"
+        }
+      }
+    ],
+    "noUnlimited": "<strong>Ningún plan es ilimitado.</strong> Los números de arriba son los que valen, y son los mismos en los Términos y en la ficha de la tienda.",
+    "fineprint": "La suscripción la cobra la App Store o Google Play y se cancela en la propia tienda. Detalles en <refund>Suscripción y reembolsos</refund>."
+  },
+  "closing": {
+    "title": "Tu planta está intentando decirte algo",
+    "text": "Haz la foto y descubre qué. ¿Dudas antes de descargar? La <help>Ayuda</help> responde las más comunes.",
+    "soon": "Muy pronto en la App Store y en Google Play"
+  }
+}

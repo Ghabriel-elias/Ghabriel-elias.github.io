@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "how": "How it works",
+    "pricing": "Pricing",
+    "help": "Help"
+  },
+  "footer": {
+    "docs": {
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "refund": "Refunds",
+      "deletion": "Delete account",
+      "help": "Help"
+    },
+    "tagline": "Broto · Take better care of your plants",
+    "entity": "61.021.870 Ghabriel Elias Fonseca de Souza · CNPJ 61.021.870/0001-31"
+  },
+  "langName": "English",
+  "langAria": "Language",
+  "brandAria": "Broto, home",
+  "topNavAria": "Broto",
+  "footNavAria": "Documents",
+  "docsEyebrow": "Documents",
+  "docs": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "refund": "Subscription and refunds",
+    "deletion": "Delete account and data",
+    "help": "Help"
+  }
+}

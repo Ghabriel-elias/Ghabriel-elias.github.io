@@ -1,142 +1,157 @@
 # Site do Broto
 
-Site estático em três idiomas, um HTML por página. Sem build, sem dependência.
+Site do app Broto em três idiomas: landing, documentos legais, ajuda e as duas
+páginas transacionais que fecham cadastro e troca de senha.
 
-```
-web/
-├── style.css                    →  /style.css   folha compartilhada
-├── app.js                       →  /app.js      navegação sem recarregar
-├── index.html                   →  /            landing em português
-├── privacidade/                 →  /privacidade
-├── termos/                      →  /termos
-├── reembolso/                   →  /reembolso
-├── exclusao/                    →  /exclusao
-├── ajuda/                       →  /ajuda
-├── en/
-│   ├── index.html               →  /en          landing em inglês
-│   ├── privacy/                 →  /en/privacy
-│   ├── terms/                   →  /en/terms
-│   ├── refund/                  →  /en/refund
-│   ├── delete-account/          →  /en/delete-account
-│   └── help/                    →  /en/help
-└── es/
-    ├── index.html               →  /es          landing em espanhol
-    ├── privacidad/              →  /es/privacidad
-    ├── terminos/                →  /es/terminos
-    ├── reembolso/               →  /es/reembolso
-    ├── eliminar-cuenta/         →  /es/eliminar-cuenta
-    └── ayuda/                   →  /es/ayuda
+Next.js com App Router, exportado como site estático (`output: "export"`) e
+servido pelo GitHub Pages em **https://ghabriel-elias.github.io/broto**. Não há
+servidor: o build gera HTML e o Pages entrega.
+
+## Como rodar
+
+```bash
+npm install
+npm run dev        # http://localhost:3000/broto
+npm run typecheck
+npm run lint
+npm run build      # gera ./out
 ```
 
-A raiz de cada idioma é a **landing**: apresentação do produto, como funciona, o
-card "Como confirmar", lembretes, Brotinho, o que o app não faz e os preços. Os
-documentos legais ficam abaixo dela e aparecem no rodapé de toda página.
+## Estrutura
 
-Não existe `_redirects` nem nenhuma outra configuração de servidor. A pasta com
-`index.html` dentro é o que gera a URL limpa — `/termos` em vez de
-`/termos.html` — e isso funciona igual no Netlify, na Vercel e no GitHub Pages.
+Mesma convenção do repo do app: `src/app` só declara rotas, `src/screens` tem as
+telas de verdade.
 
-O seletor `pt · en · es` leva ao **mesmo documento** no outro idioma, então toda
+```
+src/
+├── app/                     rotas finas, uma por URL
+│   ├── (pt)/                landing e documentos em português, na raiz
+│   ├── (en)/en/             idem em inglês
+│   └── (es)/es/             idem em espanhol
+├── screens/
+│   ├── home/                landing: index.tsx + components/ + mock/
+│   ├── doc/                 documentos: uma tela para os cinco textos
+│   └── auth/                confirmado e nova-senha, com seus hooks
+├── components/              Topbar, Footer, LangMenu, Icons, Link
+├── constants/               rotas, idiomas, chaves do Supabase
+├── i18n/locales/            pt-BR, en-US, es-ES
+├── services/                supabaseAuth
+├── style/                   globals.css e as fontes
+└── utils/                   password, authLink
+```
+
+Cada idioma é um **route group com layout próprio**, porque o `<html lang>` muda
+entre eles. Trocar de idioma recarrega a página; navegar dentro do mesmo idioma
+não.
+
+## URLs
+
+O português fica na raiz, sem prefixo. Os outros dois têm slug próprio por
+documento — nada é traduzido por convenção, tudo está em
+`src/constants/routes.ts`.
+
+| documento | pt | en | es |
+|---|---|---|---|
+| privacidade | `/privacidade` | `/en/privacy` | `/es/privacidad` |
+| termos | `/termos` | `/en/terms` | `/es/terminos` |
+| reembolso | `/reembolso` | `/en/refund` | `/es/reembolso` |
+| excluir conta | `/exclusao` | `/en/delete-account` | `/es/eliminar-cuenta` |
+| ajuda | `/ajuda` | `/en/help` | `/es/ayuda` |
+
+O seletor de idioma leva ao **mesmo documento** no outro idioma, então toda
 página nova nasce nas três ou o seletor aponta para o nada.
 
-Os links "Como funciona" e "Preços" do topo são âncoras da landing (`/#precos`,
-`/en#pricing`, `/es#precios`). Quando vêm de um documento, o `app.js` troca a
-página e rola até a âncora.
+## Textos
 
-`app.js` troca a página sem recarregar, mantendo a URL pela History API. Se o
-JavaScript falhar, cada página continua sendo um arquivo estático que funciona
-sozinho.
+Interface e landing ficam em `src/i18n/locales/<locale>/`, nos mesmos namespaces
+do app (`common`, `screens/home`, `screens/auth`). Texto com marcação usa `Trans`
+com tags nomeadas:
+
+```json
+"fineprint": "A assinatura é cobrada pela loja. Detalhes em <refund>Assinatura e reembolso</refund>."
+```
+
+Os **documentos legais não são strings de i18n** — são documentos. Cada um é um
+componente em `src/screens/doc/content/<locale>/`, com o texto na íntegra. Jogar
+um contrato dentro de um JSON só dificultaria revisar e versionar o texto.
+
+A landing é renderizada no servidor, então nada disso vira JavaScript no
+navegador: `Trans` vem de `react-i18next/TransWithoutContext`, que não depende de
+provider.
+
+## O que não pode quebrar
+
+`/confirmado` e `/nova-senha` são transacionais: o link do e-mail do Supabase cai
+nelas. Se pararem de funcionar, ninguém confirma cadastro nem recupera senha.
+
+São as únicas páginas com `"use client"`. Ficam fora da navegação, fora do
+seletor de idioma e levam `noindex`. O idioma delas **não vem da URL** — vem do
+navegador, porque o link do e-mail é sempre o mesmo para todo mundo.
+`useAuthCopy` resolve isso com `useSyncExternalStore`, devolvendo `null` no
+servidor para o HTML sair neutro e não dar divergência na hidratação.
+
+`src/services/supabaseAuth.ts` fala direto com a API REST de auth, sem SDK. O
+link usa `token_hash`, e **não** o código PKCE: o verificador do PKCE mora no
+armazenamento do celular, então o navegador nunca conseguiria completar uma troca
+iniciada pelo app. O token some da URL com `history.replaceState` assim que é
+lido, para não ficar no histórico nem vazar pelo `Referer`.
+
+A `anon key` em `src/constants/supabase.ts` é pública por definição — já vai no
+bundle do app — e sozinha não abre nada: a RLS continua valendo.
 
 ## Cor e tipografia
 
 Mesma paleta do app, **sem modo escuro** — o app é `light` fixo e o site
-acompanha. As variáveis estão no topo do `style.css`; nenhuma regra usa hex
-solto. Fraunces 600 nos títulos, DM Sans no corpo, DM Mono em número, data e
-eyebrow.
+acompanha. As variáveis estão no topo de `src/style/globals.css`; nenhuma regra
+usa hex solto.
 
-## Publicar de graça no Netlify
+Fraunces nos títulos, DM Sans no corpo, DM Mono em número, data e eyebrow. As
+três vêm por `next/font`, self-hosted. A Fraunces precisa de `axes: ["opsz"]`:
+sem o eixo óptico as letras saem mais largas e os títulos quebram de linha
+diferente.
 
-1. Entre em [app.netlify.com/drop](https://app.netlify.com/drop).
-2. Arraste a pasta `web` inteira para a área indicada.
-3. Crie a conta gratuita quando ele pedir.
-4. Em **Site configuration → Change site name**, escolha o nome.
+## Publicar
 
-Pronto, com HTTPS automático. Para atualizar depois, arraste a pasta de novo em
-**Deploys**.
+`git push` na `main` dispara `.github/workflows/deploy.yml`, que roda typecheck,
+lint e build e publica `out/` no Pages. Em **Settings → Pages**, a origem precisa
+estar em **GitHub Actions**.
 
-## Ligar um domínio próprio (opcional)
+`public/.nojekyll` é obrigatório: sem ele o Pages ignora `_next/` e o site sobe
+sem CSS nem JavaScript.
 
-Em **Domain management → Add a domain**, informe o domínio e siga as instruções
-de DNS. O certificado é emitido sozinho.
+### Domínio próprio
 
-## Depois de publicar
+Um domínio próprio serve o site na raiz, então o `basePath` `/broto` deixa de
+fazer sentido. Troque `BASE_PATH` em `src/constants/site.ts` para `""` antes de
+apontar o DNS, e crie `public/CNAME` com o domínio numa linha só. No DNS: num
+subdomínio, um `CNAME` para `ghabriel-elias.github.io`; no domínio raiz, quatro
+registros `A` para `185.199.108.153`, `185.199.109.153`, `185.199.110.153` e
+`185.199.111.153`. Depois marque **Enforce HTTPS**.
 
-Troque `SITE_BASE_URL` em `src/constants/legal.ts`, no repo do app, pela URL final. Os caminhos
-em `LEGAL_PATHS` não mudam — o app escolhe o idioma sozinho a partir de
-`i18n.language`.
+## Do outro lado
 
-Nas lojas, use a versão em português: `/privacidade` no campo de Privacy Policy,
-`/exclusao` no campo de exclusão de dados do Google Play e `/ajuda` no Support
-URL da Apple.
+No app, `SITE_BASE_URL` em `src/constants/legal.ts` aponta para
+https://ghabriel-elias.github.io/broto. É o único lugar a trocar se o endereço
+mudar: os caminhos em `LEGAL_PATHS` continuam iguais, porque o app escolhe o
+idioma sozinho a partir de `i18n.language`.
 
-## Páginas de autenticação
+No Supabase, em **Authentication → URL Configuration**, o **Site URL** é
+`https://ghabriel-elias.github.io/broto` — com o prefixo, porque os modelos de
+e-mail montam o link como `{{ .SiteURL }}/confirmado`. Em **Redirect URLs**,
+libere `/broto/nova-senha` e `/broto/confirmado` no mesmo host.
 
-Duas páginas transacionais, fora da navegação de documentos. Não têm menu
-lateral, não entram no seletor de idioma e levam `noindex`.
-
-```
-web/
-├── auth.js                      →  /auth.js     lógica compartilhada
-├── confirmado/                  →  /confirmado
-└── nova-senha/                  →  /nova-senha
-```
-
-`/confirmado` fecha o cadastro: confirma o e-mail e manda a pessoa abrir o app.
-`/nova-senha` troca a senha ali mesmo, no navegador — o app não participa.
-
-O idioma sai de `navigator.language`, com inglês como padrão. Uma página só
-atende os três idiomas porque o modelo de e-mail do Supabase tem uma URL só.
-
-### Como funciona sem SDK
-
-`auth.js` fala direto com a API REST do Supabase, em duas chamadas:
-
-1. `POST /auth/v1/verify` com `{ type, token_hash }` valida o link e devolve
-   `access_token`.
-2. `PUT /auth/v1/user` com `Authorization: Bearer <access_token>` grava a senha.
-
-A `anon key` fica no arquivo. Ela é pública por definição — já vai no bundle do
-app — e sozinha não abre nada: a RLS e as políticas continuam valendo.
-
-O link usa `token_hash`, e **não** o código PKCE. O verificador do PKCE mora no
-armazenamento do celular, então o navegador nunca conseguiria completar uma
-troca iniciada pelo app. `token_hash` não tem esse problema.
-
-O token some da URL com `history.replaceState` logo que é lido, para não ficar
-no histórico nem vazar pelo `Referer`.
-
-### O que configurar no Supabase
-
-Em **Authentication → URL Configuration**, ponha o domínio real em **Site URL**.
-Hoje está `http://localhost:3000`, que é a origem dos links quebrados no e-mail.
-
-Em **Authentication → Email Templates**, troque o link dos dois modelos:
-
-**Confirm signup**
+Em **Authentication → Email Templates**, os dois modelos precisam apontar para as
+páginas certas:
 
 ```html
 <a href="{{ .SiteURL }}/confirmado?token_hash={{ .TokenHash }}&type=email">Confirmar meu e-mail</a>
-```
-
-**Reset password**
-
-```html
 <a href="{{ .SiteURL }}/nova-senha?token_hash={{ .TokenHash }}&type=recovery">Criar nova senha</a>
 ```
 
 Sem essa troca os modelos continuam usando `{{ .ConfirmationURL }}`, que aponta
-para o Site URL e ignora as páginas novas.
+para o Site URL e ignora as páginas. O SMTP embutido envia **2 e-mails por hora
+no projeto inteiro** e não serve para produção.
 
-O SMTP embutido envia **2 e-mails por hora no projeto inteiro** e não serve para
-produção. Configure um SMTP próprio em **Project Settings → Authentication →
-SMTP Settings** antes de publicar.
+Nas lojas, use a versão em português: `/privacidade` no campo de Privacy Policy,
+`/exclusao` no campo de exclusão de dados do Google Play e `/ajuda` no Support
+URL da Apple.

@@ -1,0 +1,251 @@
+{
+  "meta": {
+    "title": "Broto",
+    "description": "O Broto identifica a espécie pela foto, mostra as causas prováveis do problema em ordem e ensina um teste para você confirmar em casa. Depois lembra de regar.",
+    "ogTitle": "Broto · Uma foto e você descobre o que a sua planta tem"
+  },
+  "hero": {
+    "eyebrow": "Identificação · diagnóstico · lembretes",
+    "title": "Uma foto, e você descobre o que a sua planta tem",
+    "lede": "Fotografe a planta. O Broto devolve a espécie, os cuidados dela e, quando tem algo errado, as causas prováveis em ordem — com um teste que você faz em casa para saber qual é.",
+    "soon": "Em breve na App Store e no Google Play",
+    "note": "3 dias com tudo liberado, sem cobrança alguma."
+  },
+  "mock": {
+    "speciesLabel": "Espécie",
+    "species": "Jiboia",
+    "sci": "Epipremnum aureum",
+    "status": "3 coisas para olhar",
+    "strip": [
+      "Diagnóstico",
+      "Teste em casa",
+      "Perguntar ao Brotinho",
+      "Cuidados"
+    ],
+    "diagnosisEyebrow": "Diagnóstico",
+    "diagnosisTitle": "O que pode estar acontecendo",
+    "diagnosisHint": "Arraste para ver as outras",
+    "causes": [
+      {
+        "cause": "Excesso de água",
+        "blocks": [
+          {
+            "label": "O que identificamos",
+            "body": "As folhas de baixo amarelam primeiro e a terra continua úmida desde a última vez que você regou."
+          },
+          {
+            "label": "O que fazer",
+            "body": "Espere a terra secar três dedos antes de regar de novo e confira se o vaso tem furo."
+          }
+        ]
+      },
+      {
+        "cause": "Pouca luz",
+        "blocks": [
+          {
+            "label": "O que identificamos",
+            "body": "Caule esticado e folha nova menor que as antigas."
+          },
+          {
+            "label": "O que fazer",
+            "body": "Aproxime de uma janela, sem sol batendo direto na folha."
+          }
+        ]
+      }
+    ],
+    "confirmEyebrow": "Teste em casa",
+    "confirmTitle": "Como confirmar o problema",
+    "confirms": [
+      {
+        "cause": "Excesso de água",
+        "text": "Enfie o dedo três centímetros na terra. Se sair úmido dois dias depois de regar, o problema é água a mais — não é fungo."
+      },
+      {
+        "cause": "Pouca luz",
+        "text": "Olhe o caule: se ele esticou na direção da janela e a folha nova saiu menor que as antigas, está faltando luz — não é praga."
+      }
+    ],
+    "careEyebrow": "Cuidados",
+    "care": [
+      {
+        "label": "Água",
+        "value": "A cada 7 dias",
+        "note": ""
+      },
+      {
+        "label": "Luz",
+        "value": "Luz indireta",
+        "note": "Perto de uma janela, sem sol direto."
+      },
+      {
+        "label": "Adubo",
+        "value": "Mensal",
+        "note": "Só na primavera e no verão."
+      }
+    ],
+    "toxicTitle": "Tóxica para pets",
+    "toxicText": "Mantenha longe de cães e gatos. Isso não substitui a orientação de um veterinário."
+  },
+  "how": {
+    "eyebrow": "Como funciona",
+    "title": "Três toques, e acabou",
+    "lede": "Não tem formulário, não tem questionário, não tem “qual o seu nível de experiência”.",
+    "steps": [
+      {
+        "n": "01",
+        "title": "Fotografe",
+        "text": "Enquadre a planta inteira, vaso e folhas. <strong>Uma foto só</strong> — o Broto não pede ângulo, não pede close e não pergunta mais nada."
+      },
+      {
+        "n": "02",
+        "title": "Descubra",
+        "text": "Espécie, cuidados e, se tem algo errado, as causas prováveis em ordem. Uma foto, uma resposta."
+      },
+      {
+        "n": "03",
+        "title": "Cadastre",
+        "text": "A planta entra na sua lista com água, luz e adubo já preenchidos. O lembrete vem sozinho."
+      }
+    ]
+  },
+  "camera": {
+    "hintTitle": "Enquadre a planta inteira",
+    "hintText": "Vaso e folhas no quadro.<br/>É o que mostra a espécie.",
+    "gallery": "Galeria",
+    "shutter": "Tirar foto"
+  },
+  "plants": {
+    "title": "Minhas plantas",
+    "count": "4 plantas",
+    "tabs": [
+      "Plantas",
+      "Tarefas",
+      "Análises"
+    ],
+    "items": [
+      {
+        "name": "Jiboia",
+        "when": "Regar hoje"
+      },
+      {
+        "name": "Espada-de-são-jorge",
+        "when": "Regar amanhã"
+      },
+      {
+        "name": "Costela-de-adão",
+        "when": "Regar em 4 dias"
+      },
+      {
+        "name": "Zamioculca",
+        "when": "Regar em 9 dias"
+      }
+    ]
+  },
+  "why": {
+    "eyebrow": "A parte que muda tudo",
+    "title": "Folha amarela não tem uma causa só",
+    "first": "Regada ontem e amarelando é água demais. Duas semanas sem água e amarelando é o contrário.",
+    "second": "Mesmo sintoma, causa oposta. Por isso o Broto <strong>não dá um veredito só</strong>: ordena as causas e te entrega o teste que decide."
+  },
+  "lock": {
+    "date": "segunda-feira, 24 de agosto",
+    "time": "09:00",
+    "app": "Broto",
+    "now": "agora",
+    "title": "Jiboia",
+    "text": "Hoje: regar e girar o vaso."
+  },
+  "reminders": {
+    "eyebrow": "Lembretes",
+    "title": "O lembrete que não vira spam",
+    "first": "<strong>Um lembrete por planta</strong>, no horário que você escolhe para cada tarefa. Ele diz o nome dela e o que precisa hoje.",
+    "second": "Atrasou, ele lembra de novo. Sem “dica do dia” e sem contador de sequência."
+  },
+  "brotinho": {
+    "eyebrow": "Brotinho",
+    "title": "Para quando a dúvida continua",
+    "text": "Ele já conhece as suas plantas. Pergunta direto, sem explicar de novo qual é a espécie e quando você regou.",
+    "ask": "Posso deixar a jiboia no banheiro?",
+    "answer": "Pode. Ela gosta da umidade, mas precisa de luz indireta — se o banheiro não tem janela, ela vai esticando e perdendo folha.",
+    "field": "Escreva sua pergunta"
+  },
+  "nots": {
+    "eyebrow": "Confiança",
+    "title": "O que o Broto não faz",
+    "items": [
+      {
+        "title": "Não passa dosagem de defensivo",
+        "text": "Primeiro vem o que dá para fazer sem comprar nada: podar a folha afetada, rever quando regar, arejar, isolar da planta do lado. Se precisar de produto, ele diz a categoria e manda seguir o rótulo."
+      },
+      {
+        "title": "Não diz se planta é comestível",
+        "text": "Nunca, nem se você insistir. Não é o tipo de erro que dá para consertar depois."
+      },
+      {
+        "title": "Não chuta espécie",
+        "text": "Um close da folha doente às vezes não mostra a planta. Nesses casos ele diz que não sabe e pede uma foto da planta inteira."
+      },
+      {
+        "title": "Não cobra por erro nosso",
+        "text": "Se a gente não conseguir ler a sua foto, o crédito volta na hora e avisamos na tela."
+      },
+      {
+        "title": "Não substitui veterinário",
+        "text": "O alerta de toxicidade para pets aparece, sempre com a ressalva de que é um aviso, não um diagnóstico."
+      },
+      {
+        "title": "Não vende seus dados",
+        "text": "Não pedimos localização precisa, não lemos sua galeria — só a foto que você escolhe enviar."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Preços",
+    "title": "Começa de graça",
+    "lede": "Nos 3 primeiros dias, tudo o que o completo tem é seu. Depois disso, cadastrar plantas, marcar que regou e receber o lembrete da rega continua sem custar nada.",
+    "plans": [
+      {
+        "tag": "Grátis",
+        "price": "R$ 0",
+        "per": "3 dias com tudo",
+        "items": [
+          "Análise e Brotinho liberados",
+          "Lembrete de todos os cuidados",
+          "Depois, a rega segue de graça"
+        ]
+      },
+      {
+        "tag": "Avulsa",
+        "price": "R$ 1,90",
+        "per": "por análise",
+        "items": [
+          "Não expira",
+          "Sem limite de quantas comprar",
+          "Sem assinar nada"
+        ]
+      },
+      {
+        "tag": "Completo",
+        "price": "R$ 12,90",
+        "per": "por mês",
+        "items": [
+          "40 análises por mês",
+          "150 mensagens do Brotinho por mês",
+          "Todas as tarefas de cuidado"
+        ],
+        "year": {
+          "price": "R$ 119,90",
+          "label": "anual",
+          "note": "<strong>Economize R$ 34,90</strong> · sai por R$ 9,99 por mês"
+        }
+      }
+    ],
+    "noUnlimited": "<strong>Nenhum plano é ilimitado.</strong> Os números acima são os que valem, e são os mesmos nos Termos e na ficha da loja.",
+    "fineprint": "A assinatura é cobrada pela App Store ou pelo Google Play e se cancela na própria loja. Detalhes em <refund>Assinatura e reembolso</refund>."
+  },
+  "closing": {
+    "title": "Sua planta está tentando dizer alguma coisa",
+    "text": "Tire a foto e descubra o quê. Dúvida antes de baixar? A <help>Ajuda</help> responde as mais comuns.",
+    "soon": "Em breve na App Store e no Google Play"
+  }
+}
